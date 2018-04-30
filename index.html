@@ -168,20 +168,25 @@
         
         --------
         Plugins: For first slide, set the autoplay time to a custom 10 seconds.
-        
+        style="list-style-type:disc"
     -->
-	<div id="Start" class="step slide" data-x="-2000" data-y="-1500" data-autoplay="100" data-transition-duration="1000" >
-        <q style="coler:#FEB729;align:center"><b>Adversarial Approach to Depth Estimation based on Left-Right Consistency</b> </q>
-		<ul>
-			<li>Ehsan Qasemi, qasemi@wisc.edu</li>
-			<li>Erfan Khoram, ekhoram@wisc.edu</li>
+	<div id="Start" class="step slide" data-x="-1000" data-y="-1500" data-autoplay="100" data-transition-duration="1000" >
+        <q style="color:#FEB729" align="center"><b>Adversarial Approach to Depth Estimation based on Left-Right Consistency</b> </q>
+		<p>	
+			<br>
+			<br>
+		</p>
+		<ul align="center" >
+			<li style="color=#FEB729">Ehsan Qasemi, qasemi@wisc.edu</li>
+			<li style="color=#00275E">Erfan Khoram, ekhoram@wisc.edu</li>
 		</ul>
-        <p> Ehsan Qasemi, qasemi@wisc.edu <br> Erfan Khoram, ekhoram@wisc.edu </p>
-		<span class="footnote"> University of Wisconsin-Madison</span>
+        <hr>
+		<p align="center"> University of Wisconsin-Madison</p>
     </div>
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500" data-autoplay="10" data-transition-duration="1000">
+	
+    <!-- <div id="bored" class="step slide" data-x="-1000" data-y="-1500" data-autoplay="10" data-transition-duration="1000">
         <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q>
-    </div>
+    </div> -->
 
     <!--
         
@@ -198,12 +203,36 @@
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
         
     -->
-    <div class="step slide" data-x="0" data-y="-1500" data-transition-duration="1000" style="color:Tomato;">
-        <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
+    <div id="Formulation" class="step slide" data-x="0" data-y="-1500" data-autoplay="100" data-transition-duration="1000">
+        <h1 style="color:#FEB729"> Problem Formulation </h1>
+		<hr>
+		<ul>
+			<li>obtain an estimation of the spatial structure of a scene</li>
+			<li >essential component in the field of:</li>
+			<ul>
+				<li>multi-view stereo</li>
+				<li>understanding the 3D geometry of the scene</li>
+				<li>unmanned vehicle and robotics</li>
+				<li>human body pose estimation</li>
+			</ul>
+			<img src="https://media.wired.com/photos/5a6fc80dccd431780f2274c1/master/w_2400,c_limit/GooglePrius.jpg" alt="Mountain View" height="300">
+		</ul>
     </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500" data-transition-duration="1000">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    <div id="PreviousW" class="step slide" data-x="1000" data-y="-1500" data-autoplay="100" data-transition-duration="1000">
+        <h1 style="color:#FEB729"> Previous Works </h1>
+		<hr>
+		<ul style="list-style-type:circle;padding-left:10px;">
+			<li style="color=#66FFFF">Supervised Learning with Ground Truth Depth dataset (data labeled with depth)</li>
+			<ul style="padding-left: 20px;">
+				<li>predict the depth of each pixel </li>
+				<li>No Large Depth-Labled datasets available</li>
+				<li>No universally acceptable method to generate this type of dataset </li>
+				<li>Generating such dataset is expensive (e.g. laser sensors) and noisy</li>
+				<li>overfitting problem duo to limited training data</li>
+			</ul>
+			<li style="color=#66FFFF">Erfan Khoram, ekhoram@wisc.edu</li>
+		</ul>
     </div>
 
     <!--
