@@ -210,7 +210,6 @@
 			<li><strong>Obtain an estimation of the spatial structure of a scene</strong></li>
 			<li><strong>Essential component in the field of:</strong>
 				<ul>
-					<li>multi-view stereo</li>
 					<li>understanding the 3D geometry of the scene</li>
 					<li>unmanned vehicle and robotics</li>
 					<li>human body pose estimation</li>
@@ -229,20 +228,20 @@
         <h1 style="color:#FEB729"> Previous Works </h1>
 		<hr>
 		<ul style="padding-left:10px;">
-			<li style="color=#66FFFF"><strong>Supervised Learning with Ground Truth Depth dataset<br></strong> <small style="font-size:50%" >(Eigen et al.,Ladicky et al., Liu et. al)</small>
+			<li style="color=#66FFFF"><strong>Supervised Learning with Ground Truth Depth dataset<br></strong>
 				<ul style="padding-left: 20px;">
-					<li>Predict the depth of each pixel</li>
-					<li>No Large Depth-Labled datasets available</li>
-					<li>Generating dataset is expensive and noisy</li>
+					<li>use semantic segmentation <small style="font-size:50%" >(Ladicky et al.)</small></li>
+					<li>over-segmented patching<small style="font-size:50%" >(Saxena et al.)</small></li>
+					<li>CNN to learn unary and pairwise terms<small style="font-size:50%" >(liu et al.)</small></li>
+					<li>refines global predictions with local information<small style="font-size:50%" >(Eigen et al.)</small></li>
 				</ul> 
 			</li>
 			<br>
-			<li style="color=#66FFFF"><strong>Depth extimation using single image</strong>
+			<li style="color=#66FFFF"><strong>Unsupervised Depth Esitmation using single image</strong>
 				<ul style="padding-left: 20px">
-					<li> Utilizing the unlabeled datasets
-					<li> use semantic segmentation <small style="font-size:50%" >(Ladicky et al.)</small></li>
-					<li> over-segmented patching to estimate 3D location<small style="font-size:50%" >(Saxena et al.)</small></li>
-					<li> LR consistency:Inspired by humans visual system
+					<li> Deep stereo with multiple images<small style="font-size:50%" >(Flynn et al.)</small></li>
+					<li> Deep 3D: generate right image from left<small style="font-size:50%" >(Xie et al.)</small></li>
+					<li> LR consistency<small style="font-size:50%" >(Godard et al.)</small></li>
 				</ul>
 			</li>
 		</ul>
