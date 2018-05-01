@@ -67,9 +67,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    <title>ADepthLR | Adversarial Approach to Depth Estimation based on Left-Right Consistency</title>
     
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="description" content="CS766 Final Project on Adversarial Approach to Depth Estimation based on Left-Right Consistency, UW-Madison Spring 2018" />
     <meta name="author" content="Bartek Szopka" />
 
     <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
@@ -207,31 +207,44 @@
         <h1 style="color:#FEB729"> Problem Formulation </h1>
 		<hr>
 		<ul>
-			<li>obtain an estimation of the spatial structure of a scene</li>
-			<li >essential component in the field of:</li>
-			<ul>
-				<li>multi-view stereo</li>
-				<li>understanding the 3D geometry of the scene</li>
-				<li>unmanned vehicle and robotics</li>
-				<li>human body pose estimation</li>
-			</ul>
-			<img src="https://media.wired.com/photos/5a6fc80dccd431780f2274c1/master/w_2400,c_limit/GooglePrius.jpg" alt="Mountain View" height="300">
+			<li><strong>Obtain an estimation of the spatial structure of a scene</strong></li>
+			<li><strong>Essential component in the field of:</strong>
+				<ul>
+					<li>multi-view stereo</li>
+					<li>understanding the 3D geometry of the scene</li>
+					<li>unmanned vehicle and robotics</li>
+					<li>human body pose estimation</li>
+				</ul>
+			</li>
+			
 		</ul>
+		<div>
+			<img src="img/arm.jpg" width="250px">
+			<img src="img/kinekt1.png" height="150px">
+			<img src="img/GooglePrius.jpg" height="200px">
+		</div>
     </div>
 
     <div id="PreviousW" class="step slide" data-x="1000" data-y="-1500" data-autoplay="100" data-transition-duration="1000">
         <h1 style="color:#FEB729"> Previous Works </h1>
 		<hr>
-		<ul style="list-style-type:circle;padding-left:10px;">
-			<li style="color=#66FFFF">Supervised Learning with Ground Truth Depth dataset (data labeled with depth)</li>
-			<ul style="padding-left: 20px;">
-				<li>predict the depth of each pixel </li>
-				<li>No Large Depth-Labled datasets available</li>
-				<li>No universally acceptable method to generate this type of dataset </li>
-				<li>Generating such dataset is expensive (e.g. laser sensors) and noisy</li>
-				<li>overfitting problem duo to limited training data</li>
-			</ul>
-			<li style="color=#66FFFF">Erfan Khoram, ekhoram@wisc.edu</li>
+		<ul style="padding-left:10px;">
+			<li style="color=#66FFFF"><strong>Supervised Learning with Ground Truth Depth dataset<br></strong> <small style="font-size:50%" >(Eigen et al.,Ladicky et al., Liu et. al)</small>
+				<ul style="padding-left: 20px;">
+					<li>Predict the depth of each pixel</li>
+					<li>No Large Depth-Labled datasets available</li>
+					<li>Generating dataset is expensive and noisy</li>
+				</ul> 
+			</li>
+			<br>
+			<li style="color=#66FFFF"><strong>Depth extimation using single image</strong>
+				<ul style="padding-left: 20px">
+					<li> Utilizing the unlabeled datasets
+					<li> use semantic segmentation <small style="font-size:50%" >(Ladicky et al.)</small></li>
+					<li> over-segmented patching to estimate 3D location<small style="font-size:50%" >(Saxena et al.)</small></li>
+					<li> LR consistency:Inspired by humans visual system
+				</ul>
+			</li>
 		</ul>
     </div>
 
@@ -245,10 +258,14 @@
         down (4 times) to make it back to its correct size.
         
     -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+    <div id="LR_consistency" class="step" data-x="0" data-y="-200" data-scale="4" data-autoplay="100">
+        <h1 style="color:#FEB729"> State-of-the-art: LR Consistency </h1>
+		<hr>
+		<div>
+			<img src="img/Architecture.png" width="100px">
+			<img src="img/loss.png" height="200px">
+		</div>
+		
     </div>
 
     <!--
@@ -259,14 +276,20 @@
         element should be rotated by 90 degrees clockwise.
         
     -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It’s a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+    <div id="Problems_LR" class="step" data-x="-850" data-y="3000" data-rotate="90" data-scale="5" data-autoplay="100">
+		<h1 style="color:#FEB729;font-size:80%"> LR Consistency Problems: Costly loss Function </h1>
+		<hr>
+        <p>What if instead of heuristic loss we <br> 
+		<span style="display:inline-block; width: 100px;"></span>
+		<span style="font-size:300%;color:#FEB729;background-color:black;">learn</span> <br>
+		<span style="display:inline-block; width: 300px;"></span>
+		the loss function</p>
     </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div id="ADepthLR" class="step" data-x="3100" data-y="2100" data-rotate="180" data-scale="7" data-autoplay="100">
+        <h1 style="color:#FEB729;font-size:80%"> Adversarial Approach</h1>
+		<hr>
+		<img src="img/Our_Approach.jpg" height="350px">
     </div>
 
     <!--
@@ -278,8 +301,10 @@
         positioned far away from us (by 3000px).
         
     -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
+    <div id="AA" class="step" data-x="1325" data-y="1625" data-z="-3000" data-rotate="300" data-scale="1">
+		<h1 style="color:#FEB729;font-size:100%"> DCGAN</h1>
+		<hr>
+        <img src="img/DCGAN.png" height="350px">
     </div>
 
     <!--
@@ -306,21 +331,32 @@
         See src/plugins/rel/README.md for more information.
         
     -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-z="0" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+    <div id="new_loss" class="step" data-x="3500" data-y="-2350" data-z="-1000" data-rotate="270" data-scale="6">
+        <!--<p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>-->
+		<h1 style="color:#FEB729;font-size:100%"> New Loss Function</h1>
+		<hr>
+		<img src="img/eqs.png" width="700px">
     </div>
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+    <div id="Results" class="step" data-x="7700" data-y="-2700" data-scale="6">
+        <h1 style="color:#FEB729;font-size:100%">Results</h1>
+		<hr>
+		<img src="img/results.png" height="500px">
     </div>
 
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/impress/impress.js">use the source</a>, Luke!</q>
+    <div id="Future_Work" class="step slide" data-x="8300" data-y="2000" data-rotate="20" data-scale="4">
+		<h1 style="color:#FEB729;font-size:100%"> Future Works</h1>
+		<hr>
+        <ul style="padding-left: 20px">
+			<li> Use different scales in discriminator
+			<li> Comparison Problem in GAN <small style="font-size:50%" >(Vondrick et al.)</small></li>
+			<li> Possible use in 2D to 3D conversion</li>
+			<li> Utilize temporal information in video </li>
+		</ul>
     </div>
 
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
+    <div id="questions?" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <a>You can find our work @ <br> "https://github.com/proska/CS766_Project"</p>
     </div>
 
     <!--
@@ -335,9 +371,10 @@
         as `data-rotate` (these two are basically aliases).
         
     -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
+    <div id="its-in-3d" class="step slide" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+		<h1 style="color:#FEB729;font-size:100%">Any Questions?</h1>
+		<hr>
+		<img src="img/ref.png" height="590px">
     </div>
 
     <!--
